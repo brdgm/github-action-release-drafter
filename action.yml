@@ -1,0 +1,17 @@
+name: Release Drafter
+description: Create release draft based on pull requests merged since last release.
+
+inputs:
+  github-token:
+    description: GITHUB_TOKEN secret
+    required: true
+
+runs:
+  using: composite
+
+  steps:
+    - uses: release-drafter/release-drafter@v6
+      with:
+        disable-autolabeler: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
