@@ -14,4 +14,4 @@ runs:
       with:
         disable-autolabeler: true
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ inputs.github-token }}
