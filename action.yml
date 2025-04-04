@@ -10,7 +10,8 @@ runs:
   using: composite
 
   steps:
-    - uses: release-drafter/release-drafter@v6
+    - if: ${{ github.repository_owner == 'brdgm' }}
+      uses: release-drafter/release-drafter@v6
       with:
         disable-autolabeler: true
       env:
