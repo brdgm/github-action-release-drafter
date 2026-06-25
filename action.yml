@@ -11,7 +11,7 @@ runs:
 
   steps:
     - if: ${{ github.repository_owner == 'brdgm' }}
-      uses: release-drafter/release-drafter@v7
+      uses: release-drafter/release-drafter@4d75298e00d9e34c483e5ff8c68d0ea1c1940c1e # v7
       with:
         disable-autolabeler: true
       env:
